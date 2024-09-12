@@ -1,0 +1,28 @@
+.header-titles {
+  background-color: #333;
+  color: white;
+  padding: 20rem;
+  text-align: center;
+
+  nav a {
+    color: white;
+    margin: 0 10rem;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header-titles {
+    padding: 40rem; /* Increased padding for larger screens */
+
+    nav a {
+      margin: 0 15px;
+      font-size: 1.1rem;
+    }
+  }
+}

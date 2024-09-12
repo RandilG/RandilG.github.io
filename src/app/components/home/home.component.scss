@@ -1,0 +1,130 @@
+:host {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: linear-gradient(to right, rgba(49, 52, 86, 0.644), rgba(245, 245, 245, 0.644)),
+      url(../../../assets/img/home-background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 50rem;
+    position: relative;
+    padding: 1rem;
+
+    .home {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      width: 90%;
+      max-width: 80rem;
+      align-items: center;
+      padding: 1rem 2rem;
+      text-align: left;
+    }
+
+    .profile_pic {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 20rem; /* Max size for larger screens */
+      }
+    }
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--black);
+        font-weight: 700;
+        line-height: 60px;
+      }
+
+      .info {
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+          color: #ffffff;
+          max-width: 100%;
+        }
+      }
+
+      .btn {
+        margin-top: 1rem;
+        button {
+          width: 200px;
+          height: 50px;
+          background: #7843e9;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 700;
+          border-radius: 5px;
+          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    .container {
+      height: auto;
+      .home {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        text-align: center;
+        padding: 1rem;
+
+        .profile_pic {
+          margin-top: 1rem;
+          img {
+            width: 100%; /* Full width in mobile view */
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  :host {
+    .container {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+      padding: 3rem;
+
+      .home {
+        padding: 3rem 5rem;
+        grid-template-columns: 1fr 1fr;
+
+        h1 {
+          font-size: 3.5rem;
+          font-weight: 800;
+          letter-spacing: 3px;
+        }
+
+        .info {
+          p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+          }
+        }
+
+        .profile_pic {
+          img {
+            max-width: 30rem; /* Larger image for large screens */
+          }
+        }
+      }
+    }
+  }
+}
